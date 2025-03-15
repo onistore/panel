@@ -1,0 +1,12 @@
+name: Keep Codespace Awake
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Setiap 5 menit
+
+jobs:
+  keep-awake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep awake
+        run: curl https://panel.onistore.github.io > /dev/null
